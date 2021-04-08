@@ -14,10 +14,10 @@ public class InvoiceFilterTest {
         Invoice mauricio = new Invoice("Mauricio", 20.0);
         Invoice arie = new Invoice("Arie", 300.0);
 
-        InvoiceDao dao = Mockito.mock(InvoiceDao.class);
+        InvoiceDao dao = Mockito.mock(InvoiceDao.class); // Mock
 
-        List<Invoice> results = Arrays.asList(mauricio, arie);
-        Mockito.when(dao.all()).thenReturn(results);
+        List<Invoice> results = Arrays.asList(mauricio, arie); // Mock
+        Mockito.when(dao.all()).thenReturn(results);	// Mock
 
         InvoiceFilter filter = new InvoiceFilter(dao);
         List<Invoice> result = filter.filter();

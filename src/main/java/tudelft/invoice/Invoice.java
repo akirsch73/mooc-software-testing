@@ -22,7 +22,8 @@ public class Invoice {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
+        System.out.println("getClass(): " + o.getClass() + " pure getClass: " + getClass());
+        System.out.println("this.getClass: " + this.getClass());
         Invoice invoice = (Invoice) o;
 
         if (Double.compare(invoice.value, value) != 0) return false;
